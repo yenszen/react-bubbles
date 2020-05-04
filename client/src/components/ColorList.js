@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import "./ColorList.css";
 
 const initialColor = {
   color: "",
@@ -117,12 +118,14 @@ const ColorList = ({ colors, updateColors }) => {
       <div className="spacer" />
       {/* stretch - build another form here to add a color */}
       <form onSubmit={onFormSubmit}>
+        <h4>Add new color!</h4>
         <input
           type="text"
           name="color"
           placeholder="color name"
           value={newColor.color}
           onChange={e => setNewColor({ ...newColor, color: e.target.value })}
+          className="fields"
         />
         <input
           type="text"
@@ -132,6 +135,7 @@ const ColorList = ({ colors, updateColors }) => {
           onChange={e =>
             setNewColor({ ...newColor, code: { hex: e.target.value } })
           }
+          className="fields"
         />
         <button type="submit">Add color</button>
       </form>

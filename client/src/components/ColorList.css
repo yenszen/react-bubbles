@@ -1,0 +1,17 @@
+form {
+  background: grey;
+  height: 15rem;
+  background: lightsteelblue;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form .fields {
+  width: 80%;
+  margin: 0 auto;
+}
+
+form button {
+  width: 35%;
+  margin: 0 auto;
+}
